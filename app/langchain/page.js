@@ -8,7 +8,7 @@ import { LLMChain } from "langchain/chains";
 
 // console.log(process.env)
 //Now that we have the api key accessible as an environment variable let us create the instance of the model
-const model = new OpenAI({ openAIApiKey:"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", temperature: 0.9 });
+const model = new OpenAI({ openAIApiKey:"Api key here", temperature: 0.9 });
 
 //Creating a prompt to call the LLM in this case the Chatgpt
 const template = "Footballer {name} plays for which club? Give just the name of the club nothing else";
