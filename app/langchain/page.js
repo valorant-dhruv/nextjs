@@ -13,6 +13,7 @@ import { HuggingFaceInference } from "langchain/llms/hf";
 // console.log(process.env)
 //Now that we have the api key accessible as an environment variable let us create the instance of the model
 
+
 //OpenAI
 // const model = new OpenAI({ openAIApiKey:"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", temperature: 0.9 });
 
@@ -28,6 +29,7 @@ const model = new Cohere({
 //     model: "gpt2",
 //     apiKey: "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", // In Node.js defaults to process.env.HUGGINGFACEHUB_API_KEY
 //   });
+
 
 
 
