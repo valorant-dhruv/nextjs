@@ -15,10 +15,11 @@ export default function RootLayout({ children }) {
 function NavigationBar()
 {
   return(
+    
    <div>
-     <Link href="/langchain">Prompt</Link>
+     <Link className={styles.navlink} href="/langchain">Prompt</Link>
      <br></br>
-     <Link  href="/">Home</Link>
+     <Link className={styles.navlink} href="/">Home</Link>
    </div>
   ) 
 }

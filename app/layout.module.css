@@ -5,3 +5,17 @@
     background: linear-gradient(to bottom, #222222, #000000);
     color: white;
 }
+
+.navlink {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .navlink:hover {
+    color: gray;
+  }
