@@ -15,19 +15,19 @@ import { HuggingFaceInference } from "langchain/llms/hf";
 
 
 //OpenAI
-// const model = new OpenAI({ openAIApiKey:"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", temperature: 0.9 });
+// const model = new OpenAI({ openAIApiKey:"", temperature: 0.9 });
 
 //Cohere
 const model = new Cohere({
     maxTokens: 20,
-    apiKey: "tapPQqBN0CM7RxmQ4iLSnICJ0MntHxNjJxypFaLi", // In Node.js defaults to process.env.COHERE_API_KEY
+    apiKey: "", // In Node.js defaults to process.env.COHERE_API_KEY
   });
 
 //Hugging Face
 // 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
 // const model = new HuggingFaceInference({
 //     model: "gpt2",
-//     apiKey: "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", // In Node.js defaults to process.env.HUGGINGFACEHUB_API_KEY
+//     apiKey: "", // In Node.js defaults to process.env.HUGGINGFACEHUB_API_KEY
 //   });
 
 
