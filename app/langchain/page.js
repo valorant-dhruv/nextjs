@@ -1,14 +1,35 @@
 "use client";
 
 import { OpenAI } from "langchain/llms/openai";
+import { Cohere } from "langchain/llms/cohere";
 import { PromptTemplate } from "langchain/prompts";
 import { useState } from "react";
 import styles from "./page.module.css"
 import { LLMChain } from "langchain/chains";
+import { HuggingFaceInference } from "langchain/llms/hf";
+
+
 
 // console.log(process.env)
 //Now that we have the api key accessible as an environment variable let us create the instance of the model
-const model = new OpenAI({ openAIApiKey:"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", temperature: 0.9 });
+
+//OpenAI
+// const model = new OpenAI({ openAIApiKey:"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", temperature: 0.9 });
+
+//Cohere
+const model = new Cohere({
+    maxTokens: 20,
+    apiKey: "tapPQqBN0CM7RxmQ4iLSnICJ0MntHxNjJxypFaLi", // In Node.js defaults to process.env.COHERE_API_KEY
+  });
+
+//Hugging Face
+// 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
+// const model = new HuggingFaceInference({
+//     model: "gpt2",
+//     apiKey: "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", // In Node.js defaults to process.env.HUGGINGFACEHUB_API_KEY
+//   });
+
+
 
 //Creating a prompt to call the LLM in this case the Chatgpt
 const template = "Footballer {name} plays for which club? Give just the name of the club nothing else";
@@ -20,8 +41,6 @@ const prompt = new PromptTemplate({
 //The chain creates a prompt and then sends its to LLM as well
 const chain = new LLMChain({ llm: model, prompt: prompt });
 
-
-
 export default function Langchain()
 {
     let [input,setinput]=useState('');
@@ -30,7 +49,7 @@ export default function Langchain()
     {
      console.log("The function has been called")
      let result=await chain.call({name:`${input}`});
-     console.log(result);
+     console.log(result.text);
     }
 
     return(

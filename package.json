@@ -13,6 +13,8 @@
     "npm": "please-use-npm"
   },
   "dependencies": {
+    "@huggingface/inference": "^1.8.0",
+    "cohere-ai": "^5.1.0",
     "dotenv": "^16.3.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",

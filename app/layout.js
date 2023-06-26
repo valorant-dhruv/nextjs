@@ -11,10 +11,14 @@ export default function RootLayout({ children }) {
   )
 }
 
+//This react component is shared across all the routes
 function NavigationBar()
 {
   return(
-    // <Link href="/langchain">Langchain</Link>
-    <h4>Navigation Bar here</h4>
+   <div>
+     <Link href="/langchain">Prompt</Link>
+     <br></br>
+     <Link  href="/">Home</Link>
+   </div>
   ) 
 }
